@@ -1,149 +1,365 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>elloRocha Odontologia</title>
-  <meta name="description" content="Clínica odontológica elloRocha. Agende sua avaliação para implantes, estética dental ou endodontia.">
-  <style>
-    :root {
-      --wine: #7b1e3a;
-      --gold: #9b8d2a;
-      --ink: #211820;
-      --muted: #675e64;
-      --paper: #fffaf8;
-      --line: #eadfdb;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-      line-height: 1.5;
-    }
-
-    main {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 40px 20px;
-    }
-
-    .shell {
-      width: min(960px, 100%);
-    }
-
-    .brand {
-      color: var(--wine);
-      font-size: clamp(2.25rem, 7vw, 5rem);
-      line-height: .95;
-      margin: 0 0 18px;
-      letter-spacing: 0;
-    }
-
-    .lead {
-      max-width: 680px;
-      color: var(--muted);
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      margin: 0 0 34px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .service {
-      display: block;
-      min-height: 150px;
-      padding: 22px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      color: inherit;
-      text-decoration: none;
-      background: #fff;
-    }
-
-    .service strong {
-      display: block;
-      color: var(--wine);
-      font-size: 1.35rem;
-      margin-bottom: 8px;
-    }
-
-    .service span {
-      color: var(--muted);
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .button {
-      display: inline-flex;
-      min-height: 48px;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 6px;
-      background: var(--wine);
-      color: #fff;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .address {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    @media (max-width: 760px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .service {
-        min-height: auto;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>elloRocha Odontologia — Cuidado de família em Anápolis, GO</title>
+<meta name="description" content="elloRocha Odontologia: a família Rocha cuidando do seu sorriso em Anápolis. Estética dental, implantes, endodontia e clínica geral com atendimento humanizado.">
+<link rel="canonical" href="https://ellorocha.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="elloRocha Odontologia — trabalhando em família">
+<meta property="og:description" content="Estética, implantes e clínica geral em Anápolis. Uma família de dentistas cuidando do seu sorriso.">
+<meta property="og:image" content="https://ellorocha.com.br/assets/img/logo-bordo.png">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Dentist",
+  "name":"elloRocha Odontologia",
+  "image":"https://ellorocha.com.br/assets/img/logo-bordo.png",
+  "url":"https://ellorocha.com.br/",
+  "telephone":"+5562999555900",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Av. Central, esq. c/ R. Ada Centine, Qd 39, Lt 42, B. Maracanã",
+    "addressLocality":"Anápolis",
+    "addressRegion":"GO",
+    "addressCountry":"BR"
+  },
+  "medicalSpecialty":["Cosmetic Dentistry","Oral Surgery","Endodontics"],
+  "sameAs":["https://instagram.com/elloRocha.odonto"]
+}
+</script>
 </head>
 <body>
-  <main>
-    <section class="shell" aria-labelledby="titulo">
-      <h1 class="brand" id="titulo">elloRocha Odontologia</h1>
-      <p class="lead">Atendimento odontológico em Goiânia com planejamento individual para implantes, estética dental e endodontia.</p>
 
-      <nav class="grid" aria-label="Tratamentos">
-        <a class="service" href="implante/">
-          <strong>Implantes</strong>
-          <span>Recupere segurança para mastigar, sorrir e falar com naturalidade.</span>
-        </a>
-        <a class="service" href="estetica/">
-          <strong>Estética dental</strong>
-          <span>Clareamento, facetas, lentes e planejamento digital do sorriso.</span>
-        </a>
-        <a class="service" href="endodontia/">
-          <strong>Endodontia</strong>
-          <span>Tratamento de canal com avaliação cuidadosa e foco em preservar o dente.</span>
-        </a>
-      </nav>
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="index.html" aria-label="elloRocha — início">
+    <img src="assets/img/logo-bordo.png" alt="elloRocha Odontologia">
+  </a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="a-familia.html">A Família</a>
+    <a href="estetica.html">Estética</a>
+    <a href="implantes.html">Implantes</a>
+    <a href="clinica-geral.html">Clínica Geral</a>
+    <a href="index.html#contato">Contato</a>
+  </nav>
+  <div class="nav__cta">
+    <a class="btn btn--wz" href="https://wa.me/5562999555900?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20elloRocha." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.3.3c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.5Z"/></svg>
+      Agendar
+    </a>
+    <button class="nav__burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span></button>
+  </div>
+</header>
 
-      <div class="actions">
-        <a class="button" href="https://wa.me/5562999555900?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20elloRocha%20e%20quero%20agendar%20uma%20avalia%C3%A7%C3%A3o.">Agendar pelo WhatsApp</a>
-        <p class="address">Goiânia, GO</p>
+<main>
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <span class="monogram-bg" style="top:-6rem;right:-6rem;" aria-hidden="true">eR</span>
+  <div class="container hero__grid">
+    <div class="hero__copy" data-reveal>
+      <span class="hero__badge"><span class="dot"></span> Atendendo em Anápolis, GO</span>
+      <h1 class="display">Cuidar do seu<br>sorriso é coisa<br>de <span class="accent"><em>família</em></span>.</h1>
+      <p class="hero__tagline">trabalhando em família</p>
+      <p class="lead">Somos três dentistas da mesma família — mãe e filhas — unindo estética, implantes e clínica geral num cuidado próximo, honesto e feito à mão.</p>
+      <div class="hero__actions">
+        <a class="btn btn--wz" href="https://wa.me/5562999555900?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20elloRocha." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.3.3c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.5Z"/></svg>
+          Agendar no WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="a-familia.html">Conheça a família</a>
       </div>
-    </section>
-  </main>
+      <div class="hero__proof">
+        <div><div class="num">3</div><div class="lbl">dentistas,<br>uma família</div></div>
+        <div><div class="num">4</div><div class="lbl">especialidades<br>num só lugar</div></div>
+        <div><div class="num">Anápolis</div><div class="lbl">bairro<br>Maracanã, GO</div></div>
+      </div>
+    </div>
+
+    <div class="hero__media" data-reveal data-delay="2">
+      <div class="collage">
+        <figure class="c1"><img src="assets/img/clinica.jpg" alt="Consultório da elloRocha em Anápolis"><figcaption>Nosso consultório</figcaption></figure>
+        <figure class="c2"><img src="assets/img/sorriso-1.jpg" alt="Paciente sorrindo após tratamento"><figcaption>Sorrisos de verdade</figcaption></figure>
+        <figure class="c3 tile" aria-hidden="true">
+          <span class="er">eR</span>
+          <small>trabalhando<br>em família</small>
+        </figure>
+        <figure class="c4"><img src="assets/img/brinde.jpg" alt="Porta-fio dental da marca elloRocha"><figcaption>@elloRocha.odonto</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST ===================== -->
+<section class="trust">
+  <div class="container trust__row">
+    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg> <span><strong>Anápolis, GO</strong> · B. Maracanã</span></div>
+    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l8-7 8 7"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg> <span>Atendimento <strong>humanizado</strong></span></div>
+    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3c2 3 4 4.5 4 8a4 4 0 0 1-8 0c0-3.5 2-5 4-8Z"/></svg> <span>Estética · Implantes · <strong>Endodontia</strong></span></div>
+    <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> <span>Profissionais com <strong>registro CRO-GO</strong></span></div>
+  </div>
+</section>
+
+<!-- ===================== FAMÍLIA ===================== -->
+<section class="section" id="familia">
+  <div class="container">
+    <div class="family-intro">
+      <div class="head" data-reveal style="margin-bottom:0">
+        <span class="eyebrow">A família Rocha</span>
+        <h2 class="section-title">Não é só uma clínica.<br>É a nossa <em>família</em> cuidando da sua.</h2>
+      </div>
+      <p class="lead" data-reveal data-delay="1">Mãe e duas filhas, cada uma especialista na sua área, atendendo lado a lado. Essa proximidade muda tudo: você é acolhido por gente que trata o seu sorriso como se fosse de casa.</p>
+    </div>
+
+    <div class="family-grid">
+      <!-- Dra. Ester -->
+      <article class="doc-card" data-reveal data-delay="1">
+        <div class="doc-card__photo">
+          <span class="doc-card__tag">Matriarca</span>
+          <span class="doc-card__mono">E</span>
+          <!-- FASE 2: substituir o monograma pela foto -> <img src="assets/img/dra-ester.jpg" alt="Dra. Ester Rocha"> -->
+        </div>
+        <div class="doc-card__body">
+          <h3>Dra. Ester Rocha</h3>
+          <p class="doc-card__role">Estética &amp; Prótese</p>
+          <p class="doc-card__cro">CRO-GO 2071</p>
+          <p class="doc-card__quote">“Faço odontologia desde sempre — e cada sorriso recuperado ainda me emociona.”</p>
+        </div>
+      </article>
+      <!-- Dra. Larissa -->
+      <article class="doc-card" data-reveal data-delay="2">
+        <div class="doc-card__photo">
+          <span class="doc-card__tag">Endodontia</span>
+          <span class="doc-card__mono">L</span>
+        </div>
+        <div class="doc-card__body">
+          <h3>Dra. Larissa Michelle</h3>
+          <p class="doc-card__role">Endodontista (canal)</p>
+          <p class="doc-card__cro">CRO-GO 10166</p>
+          <p class="doc-card__quote">“Tratamento de canal sem dor e sem medo. Meu trabalho é salvar o seu dente.”</p>
+        </div>
+      </article>
+      <!-- Dra. Stéphanie -->
+      <article class="doc-card" data-reveal data-delay="3">
+        <div class="doc-card__photo">
+          <span class="doc-card__tag">Implantes</span>
+          <span class="doc-card__mono">S</span>
+        </div>
+        <div class="doc-card__body">
+          <h3>Dra. Stéphanie Caroline</h3>
+          <p class="doc-card__role">Implantodontia &amp; Cirurgia</p>
+          <p class="doc-card__cro">CRO-GO 13715</p>
+          <p class="doc-card__quote">“Da limpeza ao implante: cuido de cada detalhe com técnica e carinho.”</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ESPECIALIDADES ===================== -->
+<section class="section section--nude" id="especialidades">
+  <div class="container">
+    <div class="head head--center" data-reveal>
+      <span class="eyebrow">Nossas especialidades</span>
+      <h2 class="section-title">Tudo o que o seu sorriso<br>precisa, <em>na mesma casa</em>.</h2>
+    </div>
+    <div class="serv-grid">
+      <article class="serv-card" data-reveal data-delay="1">
+        <div class="serv-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c2.2 3 4.5 4.8 4.5 8.5a4.5 4.5 0 0 1-9 0C7.5 7.8 9.8 6 12 3Z"/><path d="M12 8v6"/></svg></div>
+        <h3>Estética dental</h3>
+        <p>Lentes de contato, facetas, clareamento e design do sorriso para realçar a sua beleza natural.</p>
+        <a class="link-arrow" href="estetica.html">Ver mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="serv-card" data-reveal data-delay="2">
+        <div class="serv-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v9"/><path d="M9 5h6"/><path d="M10 11h4l-1 9a1 1 0 0 1-2 0Z"/></svg></div>
+        <h3>Implantes &amp; cirurgia</h3>
+        <p>Reabilitação completa com implantes e próteses para você voltar a mastigar e sorrir com confiança.</p>
+        <a class="link-arrow" href="implantes.html">Ver mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="serv-card" data-reveal data-delay="3">
+        <div class="serv-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c2.2 3 4.5 4.8 4.5 8.5a4.5 4.5 0 0 1-9 0C7.5 7.8 9.8 6 12 3Z"/><circle cx="12" cy="11" r="1.4" fill="currentColor"/></svg></div>
+        <h3>Clínica geral &amp; endodontia</h3>
+        <p>Limpeza, restaurações, tratamento de canal e prevenção — a base de um sorriso saudável por toda a vida.</p>
+        <a class="link-arrow" href="clinica-geral.html">Ver mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIFERENCIAIS ===================== -->
+<section class="section dark">
+  <span class="monogram-bg" style="bottom:-10rem;left:-4rem;color:#fff;opacity:.04;" aria-hidden="true">eR</span>
+  <div class="container">
+    <div class="head" data-reveal>
+      <span class="eyebrow">Por que a elloRocha</span>
+      <h2 class="section-title">O cuidado que só<br>uma família oferece.</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat" data-reveal data-delay="1"><div class="feat__n">i</div><h3>Confiança de casa</h3><p>Você é atendido sempre pelas mesmas profissionais, que se conhecem e conversam sobre o seu caso.</p></div>
+      <div class="feat" data-reveal data-delay="2"><div class="feat__n">ii</div><h3>Atendimento humano</h3><p>Sem pressa e sem julgamento. A gente explica cada passo e respeita o seu tempo.</p></div>
+      <div class="feat" data-reveal data-delay="3"><div class="feat__n">iii</div><h3>Limpeza elogiada</h3><p>Profilaxia caprichada e detalhista — um dos cuidados que mais rendem elogios das pacientes.</p></div>
+      <div class="feat" data-reveal data-delay="4"><div class="feat__n">iv</div><h3>Várias áreas, um lugar</h3><p>Estética, implante e canal sob o mesmo teto, com planejamento integrado entre as especialistas.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEPOIMENTOS ===================== -->
+<section class="section" id="depoimentos">
+  <div class="container">
+    <div class="head head--center" data-reveal>
+      <span class="eyebrow">Quem confia, recomenda</span>
+      <h2 class="section-title">Histórias que viram <em>sorriso</em>.</h2>
+    </div>
+    <div class="testi-grid">
+      <!-- Exemplos ilustrativos — substituir pelas avaliações reais do Google -->
+      <article class="testi" data-reveal data-delay="1">
+        <div class="testi__stars">★★★★★</div>
+        <p class="testi__txt">“Atendimento de outro nível. Me senti em casa, sem aquele medo de dentista. Saí de lá encantada.”</p>
+        <div class="testi__who"><span class="testi__av">M</span><div><b>Paciente elloRocha</b><span>Anápolis, GO</span></div></div>
+      </article>
+      <article class="testi" data-reveal data-delay="2">
+        <div class="testi__stars">★★★★★</div>
+        <p class="testi__txt">“A limpeza mais caprichada que já fiz. Cada detalhe explicado com paciência e carinho.”</p>
+        <div class="testi__who"><span class="testi__av">J</span><div><b>Paciente elloRocha</b><span>Anápolis, GO</span></div></div>
+      </article>
+      <article class="testi" data-reveal data-delay="3">
+        <div class="testi__stars">★★★★★</div>
+        <p class="testi__txt">“Profissionais que amam o que fazem. Voltei a sorrir sem esconder a boca. Gratidão à família Rocha.”</p>
+        <div class="testi__who"><span class="testi__av">R</span><div><b>Paciente elloRocha</b><span>Anápolis, GO</span></div></div>
+      </article>
+    </div>
+    <p class="testi__note">Depoimentos ilustrativos — serão substituídos pelas avaliações reais dos nossos pacientes.</p>
+  </div>
+</section>
+
+<!-- ===================== PRIMEIRA CONSULTA ===================== -->
+<section class="section section--blush">
+  <div class="container">
+    <div class="head" data-reveal>
+      <span class="eyebrow">Como funciona</span>
+      <h2 class="section-title">Sua primeira visita,<br>sem mistério.</h2>
+    </div>
+    <div class="steps">
+      <div class="step" data-reveal data-delay="1"><div class="step__n"></div><h3>Conversa</h3><p>Você nos conta o que sente e o que deseja. A gente escuta de verdade.</p></div>
+      <div class="step" data-reveal data-delay="2"><div class="step__n"></div><h3>Avaliação</h3><p>Exame completo e, quando preciso, exames de imagem para entender seu caso.</p></div>
+      <div class="step" data-reveal data-delay="3"><div class="step__n"></div><h3>Plano</h3><p>Apresentamos as opções com clareza, prazos e valores — sem surpresa.</p></div>
+      <div class="step" data-reveal data-delay="4"><div class="step__n"></div><h3>Cuidado</h3><p>Tratamento conduzido pela especialista certa, no seu ritmo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="head head--center" data-reveal>
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2 class="section-title">Tirando suas <em>dúvidas</em>.</h2>
+    </div>
+    <div class="faq">
+      <div class="faq__item" data-reveal>
+        <button class="faq__q" aria-expanded="false"><span>Vocês atendem convênio?</span><span class="ic"></span></button>
+        <div class="faq__a"><p>Trabalhamos de forma particular e com condições facilitadas de pagamento. Fale com a gente no WhatsApp para conferir as opções disponíveis para o seu tratamento.</p></div>
+      </div>
+      <div class="faq__item" data-reveal>
+        <button class="faq__q" aria-expanded="false"><span>Como faço para agendar minha avaliação?</span><span class="ic"></span></button>
+        <div class="faq__a"><p>É só chamar no WhatsApp (62) 99955-5900 ou preencher o formulário aqui no site. Retornamos rapidinho para encontrar o melhor horário para você.</p></div>
+      </div>
+      <div class="faq__item" data-reveal>
+        <button class="faq__q" aria-expanded="false"><span>Tenho muito medo de dentista. E agora?</span><span class="ic"></span></button>
+        <div class="faq__a"><p>Você não está sozinho — e aqui isso é levado a sério. Nosso atendimento é humanizado, sem pressa e sem julgamento, para que cada etapa seja confortável e tranquila.</p></div>
+      </div>
+      <div class="faq__item" data-reveal>
+        <button class="faq__q" aria-expanded="false"><span>Onde fica a clínica?</span><span class="ic"></span></button>
+        <div class="faq__a"><p>Estamos na Av. Central, esquina com a R. Ada Centine, Qd 39, Lt 42, Bairro Maracanã, em Anápolis-GO.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTATO ===================== -->
+<section class="section section--nude" id="contato">
+  <div class="container contact">
+    <div class="contact__info" data-reveal>
+      <span class="eyebrow">Vamos conversar</span>
+      <h2 class="section-title">Agende sua avaliação.</h2>
+      <p class="lead">A gente adora um novo sorriso para cuidar. Chame no WhatsApp ou deixe seus dados que retornamos para você.</p>
+      <ul class="info-list">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-7-10a7 7 0 0 1 14 0c0 5.65-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></span><div><b>Endereço</b><span>Av. Central, esq. c/ R. Ada Centine, Qd 39, Lt 42 — B. Maracanã, Anápolis/GO</span></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></span><div><b>WhatsApp</b><a href="https://wa.me/5562999555900" target="_blank" rel="noopener">(62) 99955-5900</a></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span><div><b>Instagram</b><a href="https://instagram.com/elloRocha.odonto" target="_blank" rel="noopener">@elloRocha.odonto</a></div></li>
+      </ul>
+    </div>
+    <form class="form-card" data-contact data-reveal data-delay="1">
+      <div class="field"><label for="nome">Seu nome</label><input id="nome" name="nome" type="text" placeholder="Como podemos te chamar?" required></div>
+      <div class="field"><label for="tel">WhatsApp</label><input id="tel" name="tel" type="tel" placeholder="(62) 90000-0000"></div>
+      <div class="field"><label for="assunto">O que você procura?</label>
+        <select id="assunto" name="assunto">
+          <option>Estética dental</option>
+          <option>Implantes &amp; cirurgia</option>
+          <option>Tratamento de canal</option>
+          <option>Limpeza / clínica geral</option>
+          <option>Ainda não sei, quero avaliar</option>
+        </select>
+      </div>
+      <div class="field"><label for="msg">Mensagem (opcional)</label><textarea id="msg" name="msg" placeholder="Conte um pouco sobre o que você precisa..."></textarea></div>
+      <button class="btn btn--wz" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.3.3c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.5Z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+      <p class="lgpd">Ao enviar, você concorda que a elloRocha entre em contato pelos dados informados. Não compartilhamos suas informações — usamos apenas para responder ao seu atendimento.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <img src="assets/img/logo-branco.png" alt="elloRocha Odontologia">
+        <p>Uma família de dentistas cuidando do seu sorriso em Anápolis, GO. Estética, implantes, endodontia e clínica geral.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="a-familia.html">A Família Rocha</a></li>
+          <li><a href="estetica.html">Estética dental</a></li>
+          <li><a href="implantes.html">Implantes &amp; cirurgia</a></li>
+          <li><a href="clinica-geral.html">Clínica geral</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5562999555900" target="_blank" rel="noopener">(62) 99955-5900</a></li>
+          <li><a href="https://instagram.com/elloRocha.odonto" target="_blank" rel="noopener">@elloRocha.odonto</a></li>
+          <li><span>Av. Central, esq. c/ R. Ada Centine,<br>Qd 39, Lt 42 — Maracanã, Anápolis/GO</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> elloRocha Odontologia · Resp. Técnica: Dra. Ester Rocha — CRO-GO 2071</span>
+      <span class="tag">trabalhando em família</span>
+      <div class="footer__social">
+        <a href="https://instagram.com/elloRocha.odonto" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/5562999555900" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.3.3c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.5Z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="wz-float" href="https://wa.me/5562999555900?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20elloRocha." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2 0-1.5.8-2.3 1.1-2.6.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.3.3c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.5Z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
