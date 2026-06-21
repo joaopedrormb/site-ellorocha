@@ -198,6 +198,14 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
   color:var(--bordo); font-size:.7rem; font-weight:600; letter-spacing:.04em;
   padding:.35em .7em; border-radius:999px; backdrop-filter:blur(4px);
 }
+.example-photo{ position:relative; }
+.example-photo__label{
+  position:absolute; z-index:4; left:0; right:0; bottom:0; display:block;
+  padding:.55rem .8rem; background:rgba(69,21,31,.88); color:#fff;
+  font-size:.68rem; line-height:1.1; font-weight:800; letter-spacing:.12em;
+  text-align:center; text-transform:uppercase;
+}
+.collage .example-photo figcaption{ bottom:38px; }
 
 /* =====================================================================
    TRUST STRIP
@@ -228,17 +236,20 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
 }
 .doc-card:hover{ transform:translateY(-8px); box-shadow:var(--shadow); }
 .doc-card__photo{
-  aspect-ratio:4/4.4; display:flex; align-items:center; justify-content:center; position:relative;
+  aspect-ratio:4/5.15; display:flex; align-items:center; justify-content:center; position:relative;
   background:linear-gradient(155deg,var(--nude),var(--blush));
   overflow:hidden;
 }
-.doc-card__photo img{ width:100%; height:100%; object-fit:cover; }
-.doc-card:nth-child(1) .doc-card__photo img{ object-position:58% 42%; }
-.doc-card:nth-child(2) .doc-card__photo img{ object-position:50% 28%; }
-.doc-card:nth-child(3) .doc-card__photo img{ object-position:54% 34%; }
+.doc-card__photo img{
+  width:100%;
+  height:calc(100% - 3.4rem);
+  margin-top:3.4rem;
+  object-fit:cover;
+  object-position:center top;
+}
 .doc-card__mono{ font-family:var(--serif); font-style:italic; font-size:6rem; color:var(--bordo); opacity:.9; }
 .doc-card__photo::after{ content:""; position:absolute; inset:auto 0 0 0; height:42%; background:linear-gradient(180deg,transparent,rgba(69,21,31,.04)); }
-.doc-card__tag{ position:absolute; top:14px; left:14px; background:var(--paper); color:var(--bordo); font-size:.72rem; font-weight:700; letter-spacing:.04em; padding:.4em .8em; border-radius:999px; box-shadow:var(--shadow-sm); }
+.doc-card__tag{ position:absolute; z-index:5; top:14px; left:14px; background:var(--paper); color:var(--bordo); font-size:.72rem; font-weight:700; letter-spacing:.04em; padding:.4em .8em; border-radius:999px; box-shadow:var(--shadow-sm); }
 .doc-card__body{ padding:1.5rem 1.5rem 1.7rem; }
 .doc-card__body h3{ font-size:1.4rem; font-weight:500; }
 .doc-card__role{ color:var(--bordo); font-weight:600; font-size:.9rem; margin-top:.15rem; }
@@ -248,10 +259,10 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
 /* =====================================================================
    ESPECIALIDADES
    ===================================================================== */
-.serv-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.4rem; }
+.serv-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:1.1rem; }
 .serv-card{
   background:var(--paper); border:1px solid var(--linha); border-radius:var(--radius-lg);
-  padding:2rem 1.8rem; transition:.45s var(--ease); position:relative; overflow:hidden;
+  padding:1.5rem 1.25rem; transition:.45s var(--ease); position:relative; overflow:hidden;
   display:flex; flex-direction:column; gap:.9rem; min-height:240px;
 }
 .serv-card::before{ content:""; position:absolute; inset:0 0 auto 0; height:3px; background:linear-gradient(90deg,var(--champagne),var(--bordo)); transform:scaleX(0); transform-origin:left; transition:transform .5s var(--ease); }
@@ -260,12 +271,13 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
 .serv-card__photo{ aspect-ratio:4/3; border-radius:calc(var(--radius) - 6px); overflow:hidden; background:var(--nude); }
 .serv-card__photo img{ width:100%; height:100%; object-fit:cover; }
 .serv-card:nth-child(1) .serv-card__photo img{ object-position:center; }
-.serv-card:nth-child(2) .serv-card__photo img{ object-position:center 30%; }
-.serv-card:nth-child(3) .serv-card__photo img{ object-position:center 22%; }
+.serv-card:nth-child(2) .serv-card__photo img{ object-position:center; }
+.serv-card:nth-child(3) .serv-card__photo img{ object-position:center; }
 .serv-card:nth-child(4) .serv-card__photo img{ object-position:center; }
+.serv-card:nth-child(5) .serv-card__photo img{ object-position:center; }
 .serv-card__ico{ width:54px; height:54px; border-radius:14px; display:flex; align-items:center; justify-content:center; background:var(--nude); color:var(--bordo); }
 .serv-card__ico svg{ width:26px; height:26px; }
-.serv-card h3{ font-size:1.32rem; font-weight:500; }
+.serv-card h3{ font-size:1.18rem; font-weight:500; }
 .serv-card p{ color:var(--mid); font-size:.95rem; flex:1; }
 .serv-card .link-arrow{ font-size:.9rem; }
 
@@ -413,7 +425,7 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
 
 /* página única de especialidades */
 .treatment-jump{
-  display:grid; grid-template-columns:repeat(4,1fr); gap:.8rem;
+  display:grid; grid-template-columns:repeat(5,1fr); gap:.8rem;
 }
 .treatment-jump a{
   display:flex; align-items:center; justify-content:center; min-height:58px;
@@ -431,8 +443,19 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
   overflow:hidden; border-radius:var(--radius-lg); box-shadow:var(--shadow); background:var(--paper);
 }
 .specialty-section img{ width:100%; height:100%; aspect-ratio:4/3.35; object-fit:cover; }
-.specialty-section img[src*="dra-stephanie"]{ object-position:center 28%; }
-.specialty-section img[src*="dra-larissa"]{ object-position:center 24%; }
+.specialty-hero-collage{
+  display:grid; grid-template-columns:1.15fr 1fr 1fr; grid-template-rows:repeat(2, minmax(150px, 1fr));
+  gap:14px; align-self:stretch;
+}
+.specialty-hero-collage figure{
+  position:relative; overflow:hidden; border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); background:var(--paper);
+}
+.specialty-hero-collage figure:first-child{ grid-row:span 2; }
+.specialty-hero-collage img{ width:100%; height:100%; object-fit:cover; }
+.specialty-hero-collage figcaption{
+  position:absolute; left:12px; bottom:12px; border-radius:999px; padding:.35em .75em;
+  background:rgba(251,246,241,.92); color:var(--bordo); font-size:.72rem; font-weight:700;
+}
 .treatment-list{ display:grid; gap:.65rem; margin:1.4rem 0 1.8rem; color:var(--mid); }
 .treatment-list li{
   position:relative; padding-left:1.3rem;
@@ -480,6 +503,8 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
   .treatment-jump{ grid-template-columns:repeat(2,1fr); }
   .specialty-section__grid{ grid-template-columns:1fr; }
   .specialty-section__grid--reverse figure{ order:0; }
+  .specialty-hero-collage{ order:-1; grid-template-rows:repeat(2, 150px); }
+  .behind-grid{ grid-template-columns:1fr 1fr; }
   .footer__top{ grid-template-columns:1fr 1fr; }
   .collage{ grid-auto-rows:56px; }
   .page-hero__media{ order:-1; }
@@ -495,7 +520,30 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
   .nav__cta .btn{ display:none; }
   body.menu-open{ overflow:hidden; }
   .serv-grid,.family-grid,.testi-grid,.benefit-grid,.feat-grid,.steps{ grid-template-columns:1fr; }
-  .treatment-jump{ grid-template-columns:1fr; }
+  .treatment-jump{
+    display:flex;
+    gap:.65rem;
+    overflow-x:auto;
+    padding-bottom:.25rem;
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+  }
+  .treatment-jump a{
+    flex:0 0 auto;
+    min-width:max-content;
+    min-height:44px;
+    white-space:nowrap;
+    padding:.65rem .95rem;
+    scroll-snap-align:start;
+  }
+  .specialty-hero-collage{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:none;
+    align-self:auto;
+  }
+  .specialty-hero-collage figure:first-child{ grid-row:auto; }
+  .specialty-hero-collage img{ aspect-ratio:4/3; }
+  .behind-grid{ grid-template-columns:1fr; }
   .footer__top{ grid-template-columns:1fr; gap:2rem; }
   .resp{ grid-template-columns:1fr; text-align:center; justify-items:center; }
   .hero__proof{ gap:1.4rem; }
@@ -519,6 +567,17 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
 .visual-proof figcaption{ padding:.8rem 1rem; color:var(--mid); font-size:.82rem; background:var(--paper); }
 .service-visual figure:nth-child(2) img{ object-position:center top; }
 
+.behind-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+.behind-grid figure{ overflow:hidden; border-radius:var(--radius-lg); box-shadow:var(--shadow-sm); background:var(--paper); border:1px solid var(--linha); }
+.behind-grid img{ width:100%; height:100%; aspect-ratio:4/3; object-fit:cover; }
+.behind-grid figcaption{ padding:.85rem 1rem; color:var(--mid); font-size:.84rem; background:var(--paper); }
+@media (max-width:980px){
+  .behind-grid{ grid-template-columns:1fr 1fr; }
+}
+@media (max-width:680px){
+  .behind-grid{ grid-template-columns:1fr; }
+}
+
 /* ---------- Clínica por dentro ---------- */
 .visual-story{ background:var(--marfim); }
 .visual-story__grid{ display:grid; grid-template-columns:.78fr 1.22fr; gap:clamp(2rem,5vw,4rem); align-items:center; }
@@ -527,6 +586,7 @@ body.menu-open .nav__burger span::after{ top:0; transform:rotate(-45deg); }
 .clinic-gallery .wide{ grid-column:1; grid-row:1 / span 2; }
 .clinic-gallery .tall{ grid-column:3; grid-row:1 / span 2; }
 .clinic-gallery img{ width:100%; height:100%; object-fit:cover; }
+.clinic-gallery .wide img{ object-position:78% top; }
 .clinic-gallery figcaption{
   position:absolute; left:12px; bottom:12px; border-radius:999px; padding:.35em .75em;
   background:rgba(251,246,241,.92); color:var(--bordo); font-size:.72rem; font-weight:700;
